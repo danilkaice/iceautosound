@@ -1,0 +1,63 @@
+/* подключение шрифта */
+@font-face {
+    font-family: 'pressStart2P';
+    src: url(../fonts/PressStart2P-Regular.ttf);
+}
+/* общие стили */
+*{
+    padding: 0;
+    margin: 0;
+    font-family: pressStart2P;
+}
+html, body{
+    background-color: #00ABE1;
+    color: white;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(1, 1000px);
+    row-gap: 30px;
+    height: 100%;
+    width: 1000px;
+    background-color: rgba(255, 255, 255, 0.24);
+    justify-content: center;
+    justify-items: center;
+}
+
+/* шапка */
+header{
+    display: grid;
+    grid-template-columns: repeat(2,max-content);
+    column-gap: 564px;
+    align-content: center;
+    align-items: center;
+    height: 80px;
+}
+.logo{
+    width: 240px;
+}
+.name{
+    font-size: 20px;
+}
+/* ссылки в шапке */
+.linksH{
+    display: grid;
+    grid-template-columns: repeat(3,max-content);
+    align-items: center;
+    align-content: center;
+    column-gap: 20px;
+}
+a{
+    text-decoration: none;
+    color: #161F6D;
+}
+/* иконки */
+.icon{
+    height: 30px;
+}
+
+/* основная секция */
