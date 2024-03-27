@@ -23,7 +23,7 @@ html, body{
     row-gap: 30px;
     height: 100%;
     width: 1000px;
-    background-color: rgba(255, 255, 255, 0.24);
+    /* background-color: rgba(255, 255, 255, 0.24); */
     justify-content: center;
     justify-items: center;
 }
@@ -55,9 +55,63 @@ a{
     text-decoration: none;
     color: #161F6D;
 }
+a:hover{
+    text-decoration: underline;
+    color: white;
+}
 /* иконки */
 .icon{
     height: 30px;
 }
 
 /* основная секция */
+.logoDiv{
+    height: 300px;
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(2,400px);
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+.logoDiv p{
+    text-align: right;
+}
+.carImg{
+    width: 400px;
+}
+
+/* слайдер */
+.slideDiv{
+    height: 250px;
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(2,max-content);
+    column-gap: 40px;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+.slideDiv p{
+    color: #161F6D;
+    width: 500px;
+}
+.hSpan{
+    font-size: 20px;
+}
+.whiteSpan{
+    color: white;
+}
+.slideDiv img{
+    width: 150px;
+}
+.slideDiv a{
+    color: white;
+}
+.carousel-indicators [data-bs-target]{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+}

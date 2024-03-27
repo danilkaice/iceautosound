@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/css/style.css">
     <title>IceAutosound</title>
 </head>
@@ -19,19 +20,63 @@
             </div>
             <div class="linksH">
                 <a href="">Услуги</a>
-                <a href=""><img src="/content/icon/user.png" alt="" class="icon"></a>
-                <a href=""><img src="/content/icon/menu.png" alt="" class="icon"></a>
+                <a href=""><img src="content/icon/user.png" alt="" class="icon"></a>
+                <a href=""><img src="content/icon/menu.png" alt="" class="icon"></a>
             </div>
         </header>
 
         <!--  основная секция -->
         <section>
+            <!-- слоган -->
             <div class="logoDiv">
                 <p><span>IceAutosound</span><br>
                 Мы знаем, как сделать<br>вашу машину громче!</p>
-                <img src="/content/img/car.png" alt="">
+                <img src="content/img/car.png" alt="" class="carImg">
             </div>
+
+            <!-- слайдер -->
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="slideDiv w-100">
+                        <img src="content/img/attention.png" alt="" class="carImg">
+                        <p><span class="whiteSpan hSpan">Внимание!</span><br>
+                            <span class="whiteSpan">17.06.24г</span> мы <span class="whiteSpan">не работаем!</span><br>
+                            Из-за ремонта водоснабжения<br>в районе. Все записи переносим.
+                        </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="slideDiv w-100">
+                        <img src="content/img/promotion.png" alt="" class="carImg">
+                        <p><span class="whiteSpan hSpan">Акция!</span><br>
+                            Приведи друга и получи скидку в <span class="whiteSpan">50%</span></p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="slideDiv w-100">
+                        <img src="content/img/new.png" alt="" class="carImg">
+                        <p><span class="whiteSpan hSpan">Новая услуга!</span><br>
+                            <span class="whiteSpan">Диагностика вашей системы</span><br>
+                            Промерим вашу систему на аналиче проблем<br>
+                            <a href="">Записаться</a>
+                        </p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+           
+
+            <!-- отзывы -->
+            
         </section>
     </div>
+
+    <script src="scripts/bootstrap.min.js"></script>
 </body>
 </html>
