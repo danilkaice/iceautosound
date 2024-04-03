@@ -21,7 +21,7 @@ html, body{
     display: grid;
     grid-template-columns: repeat(1, 1000px);
     row-gap: 30px;
-    height: 100%;
+    height: max-content;
     width: 1000px;
     /* background-color: rgba(255, 255, 255, 0.24); */
     justify-content: center;
@@ -65,6 +65,10 @@ a:hover{
 }
 
 /* основная секция */
+section{
+    display: grid;
+    row-gap: 40px;
+}
 .logoDiv{
     height: 300px;
     width: 1000px;
@@ -104,6 +108,9 @@ a:hover{
 .whiteSpan{
     color: white;
 }
+.blueSpan{
+    color: #161F6D;
+}
 .slideDiv img{
     width: 150px;
 }
@@ -114,4 +121,100 @@ a:hover{
     width: 10px;
     height: 10px;
     background-color: white;
+}
+
+/* акции */
+.stocksMain{
+    display: grid;
+    row-gap: 20px;
+}
+.stocks{
+    display: grid;
+    grid-template-columns: repeat(3, 310px);
+    column-gap: 35px;
+}
+.stocksCard{
+    display: grid;
+    row-gap: 10px;
+    height: 150px;
+    font-size: 14px;
+    padding: 7px;
+    background-color:rgba(255, 255, 255, 0.24);
+}
+.stocksCard:hover{
+    background-color: rgba(255, 255, 255, 0.50);
+    cursor: pointer;
+}
+.h2Span{
+    font-size: 17px;
+}
+
+/* контактная информация */
+.contactsInfo{
+    display: grid;
+    row-gap: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+/* отзывы */
+.reviewsMain{
+    display: grid;
+    row-gap: 20px;
+}
+.reviews{
+    display: grid;
+    grid-template-columns: repeat(2,475px);
+    column-gap: 50px;
+}
+.reviewsCard{
+    display: grid;
+    row-gap: 10px;
+    font-size: 14px;
+    color: #161F6D;
+    background-color:rgba(255, 255, 255, 0.24);
+    padding: 10px;
+}
+.reviewsCard:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.50);
+}
+.dateSpan{
+    text-align: right;
+}
+/* форма */
+.formReview{
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 20px;
+    height: 60px;
+}
+.formReview textarea{
+    padding: 10px;
+    resize: none;
+    color: #161F6D;
+    width: 810px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.24);
+}
+.formReview input{
+    color: #161F6D;
+    width: 170px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.24);
+}
+.formReview input:hover{
+    background-color: rgba(255, 255, 255, 0.50);
+}
+
+/* подвал */
+footer{
+    background-color: #161F6D;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1000px);
+    justify-content: center;
+}
+.foot{
+
 }
