@@ -22,8 +22,7 @@ html, body{
     grid-template-columns: repeat(1, 1000px);
     row-gap: 30px;
     height: max-content;
-    width: 1000px;
-    /* background-color: rgba(255, 255, 255, 0.24); */
+    width: 100%;
     justify-content: center;
     justify-items: center;
 }
@@ -210,11 +209,36 @@ section{
 /* подвал */
 footer{
     background-color: #161F6D;
-    width: 100%;
+    width: 99.17vw;
     display: grid;
     grid-template-columns: repeat(1, 1000px);
     justify-content: center;
+    padding: 30px;
 }
 .foot{
-
+    display: grid;
+    grid-template-columns: repeat(2,max-content);
+    column-gap: 332px;
+    font-size: 13px;
+}
+.foterInfo{
+    display: grid;
+    row-gap: 10px;
+}
+.h3Span{
+    font-size: 15px;
+}
+.social{
+    display: grid;
+    row-gap: 10px;
+    justify-items: center;
+    height: fit-content;
+}
+.socLinks{
+    display: grid;
+    grid-template-columns: repeat(3,30px);
+    column-gap: 10px;
+}
+.social img{
+    height: 30px;
 }
