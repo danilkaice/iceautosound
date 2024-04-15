@@ -311,3 +311,20 @@ footer{
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.50);
 }
+
+
+/* личный кабинет */
+.userInfo{
+    width: 1000px;
+    background-color:rgba(255, 255, 255, 0.24);
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    column-gap: 100px;
+    justify-content: center;
+    padding: 40px;
+}
+.userInfo form{
+    display: grid;
+    row-gap: 10px;
+    padding-top: 20px;
+}
