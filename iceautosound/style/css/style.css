@@ -12,11 +12,15 @@
 html, body{
     background-color: #00ABE1;
     color: white;
+    width: 100vw;
     height: 100%;
     display: grid;
     justify-content: center;
     justify-items: center;
     scrollbar-width: none;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 .wrapper{
     display: grid;
@@ -32,7 +36,7 @@ html, body{
 header{
     display: grid;
     grid-template-columns: repeat(2,max-content);
-    column-gap: 564px;
+    column-gap: 664px;
     align-content: center;
     align-items: center;
     height: 80px;
@@ -46,7 +50,6 @@ header{
 /* ссылки в шапке */
 .linksH{
     display: grid;
-    grid-template-columns: repeat(3,max-content);
     align-items: center;
     align-content: center;
     column-gap: 20px;
@@ -59,10 +62,6 @@ a:hover{
     text-decoration: underline;
     color: white;
 }
-/* иконки */
-.icon{
-    height: 30px;
-}
 
 /* основная секция */
 section{
@@ -71,9 +70,8 @@ section{
 }
 .logoDiv{
     height: 300px;
-    width: 1000px;
     display: grid;
-    grid-template-columns: repeat(2,400px);
+    grid-template-columns: repeat(2, 400px);
     justify-content: center;
     justify-items: center;
     align-content: center;
@@ -247,7 +245,7 @@ footer{
 
 /* стили остальных страниц */
 .headerP{
-    column-gap: 548px;
+    column-gap: 648px;
 }
 
 /* карточки услуг */
