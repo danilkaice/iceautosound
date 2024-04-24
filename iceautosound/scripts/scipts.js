@@ -18,7 +18,6 @@ $('.stocksCard').on('click', function(){
     $('#stoksModalLabel').html(stoks[$(this).index()].name)
     $('#stoksModalBody').text(stoks[$(this).index()].discription)
 })
-console.log(stoks[0].name)
 
 // кнопка отправки отзыва
 $('#reviewBtn').prop("disabled",true)
@@ -45,3 +44,45 @@ $('#callBtn').on('click', function(){
     $('#callModal').modal('hide')
     $('#sucsesCallModal').modal('show')
 })
+
+
+// запись на услугу
+let servicesName = [
+    'Установка акустики без сабуфера',
+    'Установка акустики вместе с сабуфером',
+    'Установка усилителя',
+    'Настройка вашей акустики',
+    'Диагностика вашей системы'
+]
+$('.servicesBtn').on('click', function(){
+    $('#servicesModalLabel span').text(servicesName[$(this).val()])
+})
+
+// кнопка записи
+$('#zapisBtn').on('click', function(){
+   $('.formZapis').find('input').each(function(){
+        if($(this).val() != ''){
+            $(this).removeClass('null');
+        } else{
+            $(this).addClass('null');
+        }
+   })
+
+    if($('.formZapis input').hasClass('null')){
+        $('#nullSpan').html('Остались незаполненые поля!')
+    } else{
+        $('#nullSpan').html('')
+        $('#uslugaModal').modal('hide')
+        $('#sucsesZapisModal').modal('show')
+    }
+})
+
+// кнопка закрытия формы записи
+$('.closeZap').on('click', function(){
+    $('#nullSpan').html('')
+})
+
+// выбор даты
+const myDateInput = document.getElementById('dateZapis')
+const currentDate = new Date().toISOString().split('T')[0]
+myDateInput.setAttribute('min', currentDate)

@@ -46,7 +46,7 @@
                             усилителя</p>
                             <div class="priceDiv"><span class="priceSpan">от 1700₽</span><span class="remSpan">*</span></div>
                             <span class="utochSpan">*цена зависит от модели вашего авто</span>
-                        <button class="servicesBtn" data-bs-toggle="modal" data-bs-target="#uslugaModal">Записаться</button>
+                        <button class="servicesBtn" value="0" data-bs-toggle="modal" data-bs-target="#uslugaModal">Записаться</button>
                     </div>
                 </div>
             </div>
@@ -59,20 +59,20 @@
                         <p>Установим полный комплект акустики</p>
                         <div class="priceDiv"><span class="priceSpan">от 3000₽</span><span class="remSpan">*</span></div>
                         <span class="utochSpan">*цена зависит от модели вашего авто</span>
-                        <button class="servicesBtn" data-bs-toggle="modal" data-bs-target="#uslugaModal">Записаться</button>
+                        <button class="servicesBtn" value="1" data-bs-toggle="modal" data-bs-target="#uslugaModal">Записаться</button>
                     </div>
                 </div>
             </div>
 
             <div class="servicesCard">
-                <h4>Установка уселителя</h4>
+                <h4>Установка усилителя</h4>
                 <div class="servicesCardContent">
                     <img src="../content/services/usel.jpg" alt="">
                     <div class="servicesCardInfo">
                         <p>Установим усилитель и настроим его</p>
                         <div class="priceDiv"><span class="priceSpan">от 2100₽</span><span class="remSpan">*</span></div>
                         <span class="utochSpan">*цена зависит от модели вашего авто</span>
-                        <button class="servicesBtn" data-bs-toggle="modal" data-bs-target="#uslugaModal">Записаться</button>
+                        <button class="servicesBtn" value="2" data-bs-toggle="modal" data-bs-target="#uslugaModal">Записаться</button>
                     </div>
                 </div>
             </div>
@@ -85,7 +85,7 @@
                         <p>Проведем настройку вашей акустики</p>
                         <div class="priceDiv"><span class="priceSpan">от 1000₽</span><span class="remSpan">*</span></div>
                         <span class="utochSpan">*цена зависит от модели вашего авто</span>
-                        <button class="servicesBtn" data-bs-toggle="modal" data-bs-target="#uslugaModal">Записаться</button>
+                        <button class="servicesBtn" value="3" data-bs-toggle="modal" data-bs-target="#uslugaModal">Записаться</button>
                     </div>
                 </div>
             </div>
@@ -98,7 +98,7 @@
                         <p>Проверим вашу систему на наличие проблем</p>
                         <div class="priceDiv"><span class="priceSpan">от 1000₽</span><span class="remSpan">*</span></div>
                         <span class="utochSpan">*цена зависит от модели вашего авто</span>
-                        <button class="servicesBtn" data-bs-toggle="modal" data-bs-target="#uslugaModal">Записаться</button>
+                        <button class="servicesBtn" value="4" data-bs-toggle="modal" data-bs-target="#uslugaModal">Записаться</button>
                     </div>
                 </div>
             </div>
@@ -133,39 +133,58 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="stoksModalLabel">Запись:</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    <h5 class="modal-title" id="servicesModalLabel">Запись: <span class="blueSpan"></span></h5>
+                    <button type="button" class="btn-close closeZap" data-bs-dismiss="modal" aria-label="Закрыть"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="">
+                    <span id="nullSpan"></span>
+                    <form action="" class="formZapis">
                         <div>
                             <span>ФИО:</span>
-                            <input type="text">
+                            <input type="text" placeholder="Введите ФИО" class="null">
                         </div>
                         <div>
                             <span>Номер телефона:</span>
-                            <input type="text">
+                            <input type="text" id="phoneNumberInp" placeholder="+7 (___) ___-__-__" class="null">
                         </div>
                         <div>
                             <span>Марка вашего авто:</span>
-                            <input type="text">
+                            <input type="text" placeholder="Введите марку авто" class="null">
                         </div>
                         <div>
                             <span>Модель вашего авто:</span>
-                            <input type="text">
+                            <input type="text" placeholder="Введите модель авто" class="null">
                         </div>
                         <div>
                             <span>Желаемая дата:</span>
-                            <input type="date">
+                            <input type="date" placeholder="Выберите дату" id="dateZapis" class="null">
                         </div>
 
-                        <input type="button" id="reviewBtn" value="Записаться" data-bs-toggle="modal" data-bs-target="#sucsesModal">
+                        <button type="button" class="btn btn-primary" id="zapisBtn">Записаться</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- модальное окно успешной записи -->
+    <div class="modal fade" id="sucsesZapisModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="stoksModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="sucsesModalLabel">Успешно! Ожидайте звонок в ближайшее время, 
+                наш специалист свжется с вами для уточнения деталей</h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Окей</button>
+              </div>
+          </div>
+        </div>
+    </div>
+
     <script src="../scripts/bootstrap.min.js"></script>
+    <script src="../scripts/jquery-3.7.1.min.js"></script>
+    <script src="../scripts/jquery.maskedinput.js"></script>
+    <script src="../scripts/scipts.js"></script>
 </body>
 </html>

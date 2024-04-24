@@ -331,3 +331,156 @@ footer{
     border: none;
     background-color: rgba(255, 255, 255, 0.24);
 }
+
+/* модальное окно записи */
+.formZapis div{
+    display: grid;
+    grid-template-columns: repeat(1,max-content);
+    row-gap: 5px;
+}
+.formZapis{
+    display: grid;
+    grid-template-columns: repeat(1, max-content);
+    row-gap: 20px;
+}
+.formZapis input{
+    color: #161F6D;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.24);
+    width: 466px;
+    padding-left: 5px;
+    height: 30px;
+}
+#nullSpan{
+    color: red;
+}
+
+
+/* адаптив */
+@media screen and (max-width: 500px){
+    .wrapper{
+        grid-template-columns: repeat(1, 350px);
+        row-gap: 20px;
+    }
+
+    /* шапка */
+    header{
+        grid-template-columns: repeat(1,max-content);
+        padding-top: 20px;
+        row-gap: 10px;
+        height: 100px;
+        justify-items: center;
+    }
+    .headContacts{
+        display: none;
+    }
+
+    /* основаная секция */
+    section{
+        row-gap: 20px;
+        justify-content: center;
+        justify-items: center;
+    }
+    .logoDiv{
+        height: 300px;
+        grid-template-columns: repeat(1,max-content);
+        row-gap: 10px;
+    }
+    .carImg{
+        width: 350px;
+    }
+    /* слайдер */
+    .slideDiv{
+        width: 350px;
+        column-gap: 0px;
+    }
+    .slideDiv p{
+        width: 350px;
+        font-size: 13px;
+    }
+    .slideDiv img{
+        display: none;
+    }
+
+    /* акции */
+    .stocksMain{
+        width: 350px;
+    }
+    .stocks{
+        display: grid;
+        grid-template-columns: repeat(1, 350px);
+        row-gap: 35px;
+    }
+
+    /* отзывы */
+    .reviewsMain{
+        width: 350px;
+    }
+    .reviews{
+        grid-template-columns: repeat(1, 350px);
+        row-gap: 20px;
+    }
+    .formReview{
+        grid-template-columns: repeat(1, 350px);
+        row-gap: 10px;
+    }
+    .formReview textarea{
+        width: 350px;
+        height: 60px;
+    }
+    .formReview input{
+        width: 350px;
+        height: 40px;
+    }
+
+    /* контактная информация */
+    .contactsInfo{
+        margin-top: 60px;
+        width: 350px;
+        font-size: 12px;
+        text-align: left;
+    }
+    .contactsInfo h3{
+        font-size: 16px;
+    }
+    .contactsInfo div{
+        display: grid;
+    }
+
+    /* подвал */
+    footer{
+        grid-template-columns: repeat(1, 350px);
+    }
+    .foot{
+        grid-template-columns: repeat(1, 350px);
+        row-gap: 40px;
+    }
+
+    /* услуги */
+    .servicesCard{
+        grid-template-columns: repeat(1, 310px);
+        width: 350px;
+    }
+    .servicesCard h4{
+        font-size: 14px;
+    }
+    .servicesCard img{
+        display: none;
+    }
+    .servicesCardInfo {
+        width: 310px;
+    }
+    .servicesCardContent{
+        grid-template-columns: repeat(1, 310px);
+    }
+    .servicesCardInfo p{
+        height: fit-content;
+        padding-bottom: 20px;
+    }
+    .servicesBtn{
+        width: 310px;
+    }
+    .formZapis input{
+        width: 342.8px;
+    }
+}
