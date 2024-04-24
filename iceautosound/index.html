@@ -18,6 +18,12 @@
                     IceAutosound
                 </span>
             </div>
+
+            <div class="headContacts">
+                <span>+7 (902) 590-88-22</span>
+                <span>г. Курган, ул. Коли Мяготина 8</span>
+            </div>
+
             <div class="linksH">
                 <a href="pages/services.html">Услуги</a>
             </div>
@@ -62,32 +68,32 @@
                         <p><span class="whiteSpan hSpan">Новая услуга!</span><br>
                             <span class="whiteSpan">Диагностика вашей системы</span><br>
                             Промерим вашу систему на аналиче проблем<br>
-                            <a href="">Записаться</a>
+                            <a href="pages/services.html">Записаться</a>
                         </p>
                     </div>
                   </div>
                 </div>
             </div>
-
+            
             <!-- акции -->
             <div class="stocksMain">
                 <h5>Акции:</h5>
                 <!-- карточки -->
                 <div class="stocks">
-                    <div class="stocksCard">
+                    <div class="stocksCard" data-bs-toggle="modal" data-bs-target="#stoksModal">
                         <span class="h2Span">Пошуми с другом</span>
                         <p>Приведи друга и получи скидку в 
                             <span class="blueSpan">50%</span></p>
                     </div>
 
-                    <div class="stocksCard">
+                    <div class="stocksCard" data-bs-toggle="modal" data-bs-target="#stoksModal">
                         <span class="h2Span">Будь в теме</span>
                         <p>Наклей наше <span class="blueSpan">лого</span> на свое
                             авто и получи скидку на 
                             <span class="blueSpan">наши услуги</span></p>
                     </div>
 
-                    <div class="stocksCard">
+                    <div class="stocksCard" data-bs-toggle="modal" data-bs-target="#stoksModal">
                         <span class="h2Span">Лови летний вайб</span>
                         <p>с 21.06.24г по 21.07.24г
                             <span class="blueSpan">30%</span> скидки на
@@ -95,14 +101,7 @@
                     </div>
                 </div>
             </div>
-
-            <!-- контактная информация -->
-            <div class="contactsInfo">
-                <h3>Сзязаться с нами можно:</h3>
-                <p>По номеру телефона: <span class="blueSpan">8 902 590-88-22</span></p>
-                <p>Можете <a href="">заказать</a> звонок</p>
-            </div>
-
+            
             <!-- отзывы -->
             <div class="reviewsMain">
                 <h5>Отзывы:</h5>
@@ -113,7 +112,7 @@
                         <p>Парни - молодцы, сделали быстро икачественно</p>
                         <span class="whiteSpan dateSpan">10.06.2024г</span>
                     </div>
-
+                    
                     <div class="reviewsCard">
                         <span class="h2Span whiteSpan">Михаил</span>
                         <p>Остался крайне доволен обслуживанием! 
@@ -122,14 +121,21 @@
                         <span class="whiteSpan dateSpan">03.06.2024г</span>
                     </div>
                 </div>
-
+                
                 <h5>Оставьте свой отзыв:</h5>
                 <!-- поле написания отзыва -->
                 <form class="formReview">
-                    <textarea type="text" name="" id=""></textarea>
+                    <textarea type="text" name="" id="" required></textarea>
                     <input type="submit" value="Отправить">
                 </form>
             </div>
+            
+                <!-- контактная информация -->
+                <div class="contactsInfo">
+                    <h3>Сзязаться с нами можно:</h3>
+                    <p>По номеру телефона: <span class="blueSpan">+7 (902) 590-88-22</span></p>
+                    <p>Можете <a href="" data-bs-toggle="modal" data-bs-target="#callModal">заказать</a> звонок</p>
+                </div>
         </section>
         
         <!-- подвал -->
@@ -154,6 +160,38 @@
                 </div>
             </div>
         </footer>
+    </div>
+
+    <!-- модальное окно акции -->
+    <div class="modal fade" id="stoksModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="stoksModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="stoksModalLabel">Заголовок модального окна</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Окей</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- модальное окно успешной отправки отзыва -->
+    <div class="modal fade" id="sucsesModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="stoksModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="stoksModalLabel">Отзыв успешно отправлен, в скором времени он появится на сайте</h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Окей</button>
+              </div>
+          </div>
+        </div>
     </div>
 
     <script src="scripts/bootstrap.min.js"></script>

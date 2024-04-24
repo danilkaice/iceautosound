@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/css/bootstrap.min.css">
+    <style>
+        *, ::after, ::before{
+            box-sizing: content-box;
+        }
+    </style>
     <link rel="stylesheet" href="../style/css/style.css">
     <title>IceAutosound: услуги</title>
 </head>
@@ -17,6 +23,12 @@
                     IceAutosound
                 </span>
             </div>
+
+            <div class="headContacts">
+                <span>+7 (902) 590-88-22</span>
+                <span>г. Курган, ул. Коли Мяготина 8</span>
+            </div>
+
             <div class="linksH">
                 <a href="../index.html">Главная</a>
             </div>
@@ -34,7 +46,7 @@
                             усилителя</p>
                             <div class="priceDiv"><span class="priceSpan">от 1700₽</span><span class="remSpan">*</span></div>
                             <span class="utochSpan">*цена зависит от модели вашего авто</span>
-                        <button class="servicesBtn">Записаться</button>
+                        <button class="servicesBtn" data-bs-toggle="modal" data-bs-target="#uslugaModal">Записаться</button>
                     </div>
                 </div>
             </div>
@@ -47,7 +59,7 @@
                         <p>Установим полный комплект акустики</p>
                         <div class="priceDiv"><span class="priceSpan">от 3000₽</span><span class="remSpan">*</span></div>
                         <span class="utochSpan">*цена зависит от модели вашего авто</span>
-                        <button class="servicesBtn">Записаться</button>
+                        <button class="servicesBtn" data-bs-toggle="modal" data-bs-target="#uslugaModal">Записаться</button>
                     </div>
                 </div>
             </div>
@@ -60,7 +72,7 @@
                         <p>Установим усилитель и настроим его</p>
                         <div class="priceDiv"><span class="priceSpan">от 2100₽</span><span class="remSpan">*</span></div>
                         <span class="utochSpan">*цена зависит от модели вашего авто</span>
-                        <button class="servicesBtn">Записаться</button>
+                        <button class="servicesBtn" data-bs-toggle="modal" data-bs-target="#uslugaModal">Записаться</button>
                     </div>
                 </div>
             </div>
@@ -73,7 +85,7 @@
                         <p>Проведем настройку вашей акустики</p>
                         <div class="priceDiv"><span class="priceSpan">от 1000₽</span><span class="remSpan">*</span></div>
                         <span class="utochSpan">*цена зависит от модели вашего авто</span>
-                        <button class="servicesBtn">Записаться</button>
+                        <button class="servicesBtn" data-bs-toggle="modal" data-bs-target="#uslugaModal">Записаться</button>
                     </div>
                 </div>
             </div>
@@ -86,7 +98,7 @@
                         <p>Проверим вашу систему на наличие проблем</p>
                         <div class="priceDiv"><span class="priceSpan">от 1000₽</span><span class="remSpan">*</span></div>
                         <span class="utochSpan">*цена зависит от модели вашего авто</span>
-                        <button class="servicesBtn">Записаться</button>
+                        <button class="servicesBtn" data-bs-toggle="modal" data-bs-target="#uslugaModal">Записаться</button>
                     </div>
                 </div>
             </div>
@@ -115,5 +127,25 @@
             </div>
         </footer>
     </div>
+
+    <!-- модальное окно записи -->
+    <div class="modal fade" id="uslugaModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="stoksModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="stoksModalLabel">Запись:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <form action=""></form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Окей</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/bootstrap.min.js"></script>
 </body>
 </html>
