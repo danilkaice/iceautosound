@@ -182,8 +182,7 @@ section{
     padding: 10px;
 }
 .reviewsCard:hover{
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.50);
+    cursor:default;
 }
 .dateSpan{
     text-align: right;
@@ -319,25 +318,16 @@ footer{
 }
 
 
-/* личный кабинет */
-.userInfo{
-    width: 1000px;
-    background-color:rgba(255, 255, 255, 0.24);
-    display: grid;
-    grid-template-columns: repeat(2, 400px);
-    column-gap: 100px;
-    justify-content: center;
-    padding: 40px;
-}
-.userInfo form{
-    display: grid;
-    row-gap: 10px;
-    padding-top: 20px;
-}
-
-
-
 /* модальное окно */
 .modal-content{
     background-color:#3dbfe8;
+}
+.btn-primary{
+    background-color: #161F6D;
+    border-color: #161F6D;
+}
+#phoneNumberInp{
+    color: #161F6D;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.24);
 }

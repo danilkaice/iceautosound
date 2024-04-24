@@ -125,8 +125,8 @@
                 <h5>Оставьте свой отзыв:</h5>
                 <!-- поле написания отзыва -->
                 <form class="formReview">
-                    <textarea type="text" name="" id="" required></textarea>
-                    <input type="submit" value="Отправить">
+                    <textarea type="text" name="" id="reviewText"></textarea>
+                    <input type="button" id="reviewBtn" value="Отправить" data-bs-toggle="modal" data-bs-target="#sucsesModal">
                 </form>
             </div>
             
@@ -170,7 +170,7 @@
               <h5 class="modal-title" id="stoksModalLabel">Заголовок модального окна</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" id="stoksModalBody">
               ...
             </div>
             <div class="modal-footer">
@@ -185,7 +185,39 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="stoksModalLabel">Отзыв успешно отправлен, в скором времени он появится на сайте</h5>
+              <h5 class="modal-title" id="sucsesModalLabel">Отзыв успешно отправлен, в скором времени он появится на сайте</h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Окей</button>
+              </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- модальное окно успешной отправки отзыва -->
+    <div class="modal fade" id="callModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="stoksModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="callModalLabel">Укажите свой номер, наш специалист свяжется с вами в ближайшее время</h5>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="phoneNumberInp" placeholder="+7 (___) ___-__-__">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-primary" id="callBtn">Заказать</button>
+              </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- модальное окно успешного заказа звонка -->
+    <div class="modal fade" id="sucsesCallModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="stoksModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="sucsesModalLabel">Успешно! Ожидайте звонок в ближайшее время</h5>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Окей</button>
@@ -195,5 +227,8 @@
     </div>
 
     <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/jquery-3.7.1.min.js"></script>
+    <script src="scripts/jquery.maskedinput.js"></script>
+    <script src="scripts/scipts.js"></script>
 </body>
 </html>
